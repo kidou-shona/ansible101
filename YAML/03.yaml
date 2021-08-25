@@ -1,0 +1,19 @@
+---
+# mulit line with no newline character
+
+test_1: |
+   This is experiment on
+   showing no new line
+   character symbol
+
+test_2: >
+   This is experiment on
+   showing no new line
+   character symbol
+
+test_3: >-
+   This is experiment on
+   showing no new line
+   character symbol
+
+...

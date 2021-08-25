@@ -1,0 +1,6 @@
+---
+test_1: this is a string
+test_2: "this is also a string"
+test_3: 'this is string too'
+
+...

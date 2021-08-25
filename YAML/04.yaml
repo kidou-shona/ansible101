@@ -1,0 +1,16 @@
+---
+# Boolean
+
+false_1: FALSE
+false_2: false
+false_3: False
+false_4: off
+false_5: OFF
+false_6: n
+true_1: TRUE
+true_2: true
+true_3: True
+true_4: on
+true_5: ON
+true_6: y
+...

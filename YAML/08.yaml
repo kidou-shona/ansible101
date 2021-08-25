@@ -1,0 +1,13 @@
+---
+# List inside dict
+dict_1: 
+  - item 1
+  - item 2
+  - item 3
+
+dict_2:
+  - item 4
+  - item 5
+  - item 6
+
+...

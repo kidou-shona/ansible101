@@ -1,0 +1,8 @@
+---
+# Indendation. Standard is 2 spaces
+# Shows an example of dict of dict
+key_1: 
+   value_key_1: value_value_2
+key_2: 
+   value_key_2: value_value_3
+...

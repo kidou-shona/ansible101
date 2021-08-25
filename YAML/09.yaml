@@ -1,0 +1,12 @@
+---
+# Dict contains List of Dict and it contains List of items
+outer_dict:
+  - inner_dict_1:
+    - item 1
+    - item 2
+    - item3
+  - inner_dict_2:
+    - item 1
+    - item 2
+    - item 3
+...

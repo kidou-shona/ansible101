@@ -1,0 +1,5 @@
+---
+# you can't have dictionary and list in the same block
+key_1: value_1
+- my_list
+...
