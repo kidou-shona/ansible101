@@ -1,0 +1,7 @@
+---
+- name: Test the connectivity to managed nodes
+  hosts: localhost
+  gather_facts: no
+  tasks: 
+    - ping:
+...
