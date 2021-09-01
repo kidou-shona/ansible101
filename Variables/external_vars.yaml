@@ -1,0 +1,23 @@
+---
+- 
+  hosts: localhost
+  gather_facts: no
+
+  vars_files:
+    - vars.yaml
+
+
+  tasks:
+    - name: debug vars from normal
+      debug: 
+        msg: "{{ name }}"
+
+    - name: debug from dict
+      debug:
+        msg: "{{ dict_names.surname }}"
+
+    - name: debug list from inline
+      debug:
+        msg: "{{ inline_list.0 }}"
+
+...

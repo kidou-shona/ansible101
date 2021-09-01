@@ -1,0 +1,13 @@
+---
+- 
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    example_key: example_value
+
+  tasks: 
+    - name: print the variable
+      debug:
+        msg: "{{ example_key }}"
+...

@@ -1,0 +1,25 @@
+---
+-
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    apollo_missions:
+      - Apollo I
+      - Apollo II
+      - Apollo III
+      - Apollo IV
+ 
+  tasks:
+    - name: debug full list
+      debug: 
+        msg: "{{ apollo_missions }}"
+
+    - name: Debug 2nd element from list using dot notation
+      debug:
+        msg: "{{ apollo_missions.1 }}" 
+
+    - name: Debug 3rd element from list using bracket notation
+      debug:
+        msg: "{{ apollo_missions[2] }}"
+...

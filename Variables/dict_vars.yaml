@@ -1,0 +1,19 @@
+---
+- 
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    dict:
+      name: Abuharis
+
+  tasks:
+    - name: debug name in dot notation
+      debug:
+        msg: "{{ dict.name }}"
+
+    - name: debug name in bracket notation
+      debug:
+        msg: "{{ dict['name'] }}"    
+    
+...

@@ -1,0 +1,13 @@
+---
+name: Abuharis
+
+dict_names:
+    { name: Abuharis , surname: Salih }
+
+list_names:
+  - first item
+  - second item
+
+inline_list:
+  [item1, item2, item3 ]
+...
