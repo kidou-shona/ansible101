@@ -1,0 +1,29 @@
+---
+- 
+  hosts: target
+
+  vars:
+    motd_centos: "Hi CentOS user, this is a letter from Controller"
+    motd_ubuntu: "Hi Ubuntu user, this is a letter from Controller"
+
+  tasks:
+    - name: CentOS based systems
+      copy:
+        content: "{{ motd_centos }}"
+        dest: /etc/motd
+      notify: MOTD
+      when: ansible_distribution == "CentOS"
+
+    - name: Ubuntu based systems
+      copy: 
+        content: "{{ motd_ubuntu }}"
+        dest: /etc/motd
+      notify: MOTD
+      when: ansible_distribution == "Ubuntu"
+
+  handlers:
+    - name: MOTD
+      debug:
+        msg: MOTD has changed
+
+...

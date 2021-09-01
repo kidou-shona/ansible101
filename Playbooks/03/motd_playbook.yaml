@@ -1,0 +1,22 @@
+---
+# Playbook contains list of Play, mentioned with a minus sign.
+- 
+  hosts: target
+  gather_facts: no
+
+  vars: 
+    motd: "Hi User, Its a Welcome message form me!"
+
+  tasks: 
+    - name: Different method using variable
+      copy:
+        content: "{{ motd }}"
+        dest: /ect/motd
+      notify: Welcome Changed
+  
+  # Hnadlers are executed as a notify key from a task
+  handlers: 
+    - name: Welcome Changed
+      debug:
+        msg: The welcome message has been rewritten
+...
