@@ -1,0 +1,14 @@
+---
+- 
+  # Hosts defines where we are doing the execution
+  hosts:
+  # vars defines the variables used in the play, on all target machines
+  vars: 
+  # List of tasks executed within the play
+  tasks:
+  # Roles defines the list of roles to be included into the play (advanced)
+  Roles:
+  # Handlers are used to execute as a notify from a task(advanced)
+  Handlers:
+
+...

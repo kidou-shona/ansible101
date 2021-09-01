@@ -1,0 +1,14 @@
+---
+# Playbook contains list of Play, mentioned with a minus sign.
+- 
+  hosts: {{ remote_section }}
+  user: root
+
+  # Now its time to define tasks to execute
+  tasks:
+    # Taska are lists, again with minus
+    - name: Welcome message
+      copy:
+        src: motd
+        dest: /etc/motd
+...

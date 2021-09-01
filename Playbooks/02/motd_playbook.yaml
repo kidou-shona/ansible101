@@ -1,0 +1,27 @@
+---
+# Playbook contains list of Play, mentioned with a minus sign.
+- 
+  hosts: target
+  user: root
+
+  # Now its time to define tasks to execute
+  tasks:
+    # Taska are lists, again with minus
+    - name: Welcome message
+      copy:
+        content: Hi User, Its a Welcome message from me!
+        dest: /etc/motd
+
+- name: Second Play
+  hosts: target
+  gather_facts: no
+
+  vars: 
+    motd: "Hi User, Its a Welcome message form me!"
+
+  tasks: 
+    - name: Different method using variable
+      copy:
+        content: "{{ motd }}"
+        dest: /ect/motd
+...

@@ -1,0 +1,1 @@
+Hi {{ remote_user }}, this is a welcome message from {{ user}}'s controller
