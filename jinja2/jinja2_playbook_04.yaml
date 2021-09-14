@@ -1,0 +1,12 @@
+---
+# Find a list from facts and loop through it 
+- hosts: localhost
+  tasks:
+    - name: For loop concept with jinja2
+      debug:
+        msg: |
+             --- ansible for loop with Jinja2 ---
+             {% for IP in ansible_all_ipv4_addresses %}
+                IP address {{ loop.index }} = {{ IP }}
+             {% endfor %}
+...

@@ -1,0 +1,11 @@
+---
+# range function
+- hosts: localhost
+  tasks:
+    - name: Range function
+      debug:
+        msg: >-
+             {% for value in range(1,10) -%}
+                Value = {{ value }}
+             {% endfor -%}
+...

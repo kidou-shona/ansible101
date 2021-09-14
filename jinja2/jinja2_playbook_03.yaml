@@ -1,0 +1,16 @@
+---
+# else statement
+- hosts: localhost
+  tasks:
+    - name: else statement
+      debug:
+        msg: >-
+             ---- else ansible statement using jinja2 ----
+             {% if ansible_hostname == "hostname" -%}
+              this is my PC
+             {% elif ansible_hostname == "new_hostname" -%}
+              This is somebody's
+             {% else -%}
+              This is nobody's system. Confiscating... BYe
+             {% endif %}
+...

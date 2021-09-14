@@ -1,0 +1,15 @@
+---
+# if.. elif
+#
+- hosts: localhost
+  tasks: 
+    - name: elif statement
+      debug:
+        msg: >-
+             ----- ansible elif statement using jinja2 ------
+             {% if ansible_hostname == "hostname"  -%}
+               This is my PC
+             {% elif ansible_hostname == "new_hostname"  -%}
+               This is someone else's hostname
+             {% endif %}
+...

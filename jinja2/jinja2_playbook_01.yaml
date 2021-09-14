@@ -1,0 +1,16 @@
+# rename the hostname with your checking systems hostname, 
+# Take an action upon the condition
+---
+- hosts: localhost
+  tasks:
+    - name: display name
+      debug:
+        msg: >-
+             {% if ansible_hostname == "hostname" -%}
+                 this is my pC
+             {% endif %}
+
+    - name: debug
+      debug:
+        msg: "{{ ansible_os_distribution  }}"
+...

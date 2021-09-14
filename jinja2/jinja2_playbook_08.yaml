@@ -1,0 +1,8 @@
+---
+# Real-time use case
+- hosts: localhost
+  tasks: 
+    - name: convert to int
+      shell: echo "only on Red Hat 6, derivatives, and later"
+      when: ansible_facts['os_family'] == "RedHat" and ansible_facts['lsb']['major_release'] | int >= 6
+...

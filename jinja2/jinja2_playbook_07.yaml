@@ -1,0 +1,26 @@
+---
+# Go back to the slide to see more
+# Filters
+- hosts: localhost
+  tasks:
+    - name: Filters in Jinja2
+      debug:
+        msg: >
+             --- Min ---
+             {{ [1,2,3,4,5] | min }} 
+             
+             --- Max ---
+             {{ [1,2,3,4,5] | max }}
+             
+             --- unique ----
+             {{ [1,2,2,3,4,5] | unique }}
+
+             --- difference ---
+             {{ [1,2,3,4,5] | difference([2,3,4]) }}
+
+             --- Random ---
+             {{ [55, 77, 99, 100] | random }}
+
+             --- URL Split ---
+             {{ "https://www.youtube.com/channel/UCNIebdBhSB3ZP-cRgVqV0pg" | urlsplit('hostname') }}
+...
