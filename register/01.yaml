@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Register hostname
+      command: hostname -s
+      register: hostname_reg
+
+...

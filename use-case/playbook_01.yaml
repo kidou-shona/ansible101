@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Install on CentOS
+      yum:
+        name: nginx
+        state: latest
+      when: ansible_distribution == 'CentOS'
+
+    # Write the next tasks for UbunutOS
+...
