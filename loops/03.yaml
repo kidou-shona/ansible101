@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - debug:
+        var: "{{ item.key }}"
+      with_dict: 
+        Abuharis:
+             full_name: Abuharis Salih
+...

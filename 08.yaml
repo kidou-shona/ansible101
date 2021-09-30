@@ -1,0 +1,16 @@
+---
+# Take action upon a true statement using "is" 
+- hosts: localhost
+  tasks:
+    - command: hostname -s
+      when: ansible_distribution == "CentOS"
+      register: hostname_reg
+
+    - name: Install package
+      yum: 
+        name: httpd
+        state: present
+      when: hostname_reg is changed
+
+
+...

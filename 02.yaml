@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - command: hostname -s
+      register: hsotname_reg
+
+    - debug:
+        var: hostname_reg
+...

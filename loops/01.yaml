@@ -1,0 +1,15 @@
+---
+# Loop with_items
+
+- hosts: localhost
+  tasks:
+    - name: Create user
+      file:
+        path: /tmp/{{ item }}
+        state: touch
+      with_items: 
+        - new-01
+        - new-02
+
+
+...

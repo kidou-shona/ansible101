@@ -1,0 +1,10 @@
+---
+# And using list
+- hosts: localhost
+  tasks:
+    - command: hostname -s
+      when:
+        - ansible_distribution == "CentOS"
+        - ansible_distribution == "8"
+
+...

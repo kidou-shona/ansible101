@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+    - command: hostname -s
+      register: hostname_reg
+      when: ( ansible_distribution == "CentOS" and ansible_distribution == "8" )
+
+    - command: hostname -a
+      register: hostname
+      when: ( ansible_distribution == "CentOS" and ansible_distribution == "8" ) or
+            ( ansible_distribution == "Ubuntu" and ansible_distribution == "20.04" )
+...
