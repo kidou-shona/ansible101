@@ -1,0 +1,39 @@
+  - name: "Playing with Ansible and Git"
+    hosts: localhost
+    become: yes
+    connection: local
+    vars_files:
+      - /home/jovyan/ansible101/vars.yaml
+    
+    tasks:
+
+    - name: "Check connectivity"
+      shell: "ping -c 5 localhost"
+      register: "output"
+
+    - debug: var=output.stdout_lines  
+    - name: more complex items to add several users
+      user:
+       name: "{{ item.name }}"
+       uid: "{{ item.uid }}"
+       groups: "{{ item.groups }}"
+       state: present
+      with_items: "{{ user_details }}"
+      # - hosts: localhost
+      # become: yes
+    tasks:
+
+        - name: update
+          apt: update_cache=yes   
+   
+        - name: Install Nginx
+          apt: name=nginx state=latest
+
+
+          notify:
+           - restart nginx
+
+    handlers:
+         - name: restart nginx
+           service: name=nginx state=reloaded      
+         - debug: var=output.stdout_lines

@@ -1,0 +1,4 @@
+ user_details:
+      - {name: 'user1', uid: 1002, groups: ['admin', ]}
+      - {name: 'user2', uid: 1003, groups: ['logs']}
+      - {name: 'user3', uid: 1004, groups: ['annlogs']}
